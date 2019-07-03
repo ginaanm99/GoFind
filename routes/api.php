@@ -23,3 +23,5 @@ Route::post('update/{id}', 'API\UserController@updateUser');
 Route::delete('delete/{id}', 'API\UserController@deleteUser');
 Route::get('listAll', 'API\UserController@index');
 Route::get('getUser/{id}', 'API\UserController@show');
+Route::post('postAduan', 'API\AduanController@postAduan');
+Route::post('updateAduan/{id}', 'API\AduanController@updateAduan');

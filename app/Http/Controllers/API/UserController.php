@@ -42,8 +42,8 @@ class UserController extends BaseController
     public function updateUser(Request $request, $id){
  
         $user = User::find($id);
-        $user->name = $request->input('name');
-        $user->no_hp = $request->input('no_hp');
+        $user->name = $request->input('name') ? $request->input('name') : $user->name;
+        $user->no_hp = $request->input('no_hp') ? $request->input('no_hp') : $user->no_hp;
         $user->save();
  
         $result = [
